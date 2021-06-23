@@ -8,7 +8,7 @@ const app = new Vue({
     data: {
 
         todoIn: '',
-
+        
         arrayTodo: [
 
             'Fare compiti',
@@ -21,25 +21,18 @@ const app = new Vue({
     methods: {
 
         addList() {
-            this.arrayTodo.push(this.todoIn );
-            this.todoIn = '';
+            
+            (this.todoIn === '') ? alert("Nessun Todo") : this.arrayTodo.push(this.todoIn);
 
-               // trovare modo se e vuoto non aggiunge niente all array
-             if (this.todoIn === '') {
-
-               //  this.todoIn.pop()
-                alert('hello')
-                
-             } 
+            this.todoIn = '';  
+            
         },
 
-        control() {
-
-        },
+       
 
         remove(elemento) {
-            this.arrayTodo.splice(elemento, 1)
-        }
+            this.arrayTodo.splice(elemento, 1);
+        },
 
 
     }
