@@ -24,9 +24,13 @@
             </div>
     
             <div class="list">
-                <ul>
-                    <li v-for="item in arrayTodo">{{item}}<i class="fas fa-times"></i></li>
+                <ul v-if="(arrayTodo.length > 0)">
+                    <li v-for="(item, index) in arrayTodo">
+                        {{index + 1}} - {{item}}
+                        <i class="fas fa-times" @click="remove(index)"></i>
+                    </li>
                 </ul>
+                <h2 v-else>Nessun Todo</h2>
             </div>
 
 

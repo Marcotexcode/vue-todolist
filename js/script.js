@@ -23,6 +23,14 @@ const app = new Vue({
         addList() {
             this.arrayTodo.push(this.todoIn );
             this.todoIn = '';
+
+            if(this.todoIn = '') {
+               // trovare modo
+            }
+        },
+
+        remove(elemento) {
+            this.arrayTodo.splice(elemento, 1)
         }
 
 
