@@ -24,9 +24,17 @@ const app = new Vue({
             this.arrayTodo.push(this.todoIn );
             this.todoIn = '';
 
-            if(this.todoIn = '') {
-               // trovare modo
-            }
+               // trovare modo se e vuoto non aggiunge niente all array
+             if (this.todoIn === '') {
+
+               //  this.todoIn.pop()
+                alert('hello')
+                
+             } 
+        },
+
+        control() {
+
         },
 
         remove(elemento) {
