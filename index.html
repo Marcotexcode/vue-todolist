@@ -19,14 +19,13 @@
             </div>
     
             <div class="text">
-                <input type="text" placeholder="Nuovo Todo">
-                <button>Aggiungi</button>
+                <input type="text" v-on:keyup.enter="addList"  placeholder="Nuovo Todo" v-model="todoIn">
+                <button @click="addList" >Aggiungi</button>
             </div>
     
             <div class="list">
                 <ul>
-                    <li>Fare la spesa <i class="fas fa-times"></i></li>
-                    
+                    <li v-for="item in arrayTodo">{{item}}<i class="fas fa-times"></i></li>
                 </ul>
             </div>
 
